@@ -12,10 +12,12 @@ app.use(bodyParser.json());
 app.use(cors());
 // Configure Nodemailer with your Gmail credentials
 const transporter = nodemailer.createTransport({
-  service: "gmail",
+   host: "smtp.resend.com",
+    port: 465,
+    secure: false,
   auth: {
-    user: "humphreyheather03@gmail.com", // Replace with your Gmail address
-    pass: "cmgmmfqbxqhtkhiv", // Replace with your Gmail password
+    user: "resend", // Replace with your Gmail address
+    pass: "YOUR_API_KEY", // Replace with your Gmail password
   },
 });
 
